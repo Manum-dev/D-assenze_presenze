@@ -31,8 +31,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'attendances',
     'rest_framework',
     'rest_framework_simplejwt',
+    'users',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+AUTH_USER_MODEL = "users.CustomUser"
 
 EST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
