@@ -32,6 +32,9 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'attendances',
+    'accounts',
+    'admins',
+    'course_days',
     'rest_framework',
     'rest_framework_simplejwt',
     'users',
@@ -47,7 +50,7 @@ AUTH_USER_MODEL = "users.CustomUser"
 
 EST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework_simplejwt.accounts.JWTAuthentication',
     ),
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
