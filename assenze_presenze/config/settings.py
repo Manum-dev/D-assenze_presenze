@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'attendances',
     'rest_framework',
     'rest_framework_simplejwt',
     'django.contrib.admin',
