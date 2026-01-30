@@ -22,7 +22,6 @@ from .views import ParticipantProfileView, CurrentUserView
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     # Profilo partecipante
     path('participant/profile/', ParticipantProfileView.as_view(), name='participant-profile'),
     
