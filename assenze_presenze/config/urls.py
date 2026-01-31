@@ -23,16 +23,10 @@ from rest_framework_simplejwt.views import (
 )
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-
-    # 🔐 AUTH (JWT)
-    path("api/auth/login/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
-    path("api/auth/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
-
-    # 👤 USERS
-    path("api/users/", include("users.urls")),
-
-    # 📚 ALTRE APP
-    path("api/attendances/", include("attendances.urls")),
-    path("api/course-days/", include("course_days.urls")),
+   path('admin/', admin.site.urls),
+    path('api/auth/', include('accounts.urls')),         
+    path('api/', include('users.urls')),
+    path('api/', include('admins.urls')),
+    path('api/', include('course_days.urls')),
+    path('api/', include('attendances.urls')),
 ]
